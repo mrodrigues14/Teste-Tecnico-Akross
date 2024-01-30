@@ -18,7 +18,7 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../../frontend', 'index.html'));
 });
 
-const PORT = process.env.PORT || 3100;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Acesse a aplicação em http://localhost:${PORT}`);
 });
