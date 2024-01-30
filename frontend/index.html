@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Squads e Colaboradores</title>
+</head>
+<body>
+    <h1>Gestão de Squads e Colaboradores</h1>
+
+    <h2>Adicionar Squad</h2>
+    <form id="formSquad">
+        <input type="text" id="squadName" placeholder="Nome do Squad" required>
+        <button type="submit">Adicionar Squad</button>
+    </form>
+
+    <h2>Adicionar Colaborador</h2>
+    <form id="formColaborador">
+        <input type="text" id="colaboradorName" placeholder="Nome do Colaborador" required>
+        <input type="number" id="squadId" placeholder="ID do Squad" required>
+        <button type="submit">Adicionar Colaborador</button>
+    </form>
+
+    <h2>Listar Squads</h2>
+    <ul id="listaSquads"></ul>
+
+    <h2>Listar Colaboradores</h2>
+    <ul id="listaColaboradores"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -2,8 +2,9 @@
   "name": "teste-tecnico-akross",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
+    "start": "node backend/base/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -11,8 +12,9 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
-    "faker": "^6.6.6",
-    "mysql": "^2.18.1"
+    "faker": "^5.5.3",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.9.1"
   },
   "devDependencies": {
     "nodemon": "^3.0.3"
