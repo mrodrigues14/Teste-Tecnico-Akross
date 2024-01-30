@@ -1,18 +1,22 @@
 const express = require('express');
 const initializeDatabase = require('./database');
 const path = require('path');
+const router = require('../routers/router');
 
 const app = express();
+
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 initializeDatabase();
 
+app.use('/', router);
+
+app.use(express.static(path.join(__dirname, '../frontend')));
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../../frontend', 'index.html'));
 });
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
 const PORT = process.env.PORT || 3100;
 app.listen(PORT, () => {
