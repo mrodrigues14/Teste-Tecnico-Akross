@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestão de Squads e Colaboradores</title>
+    <link rel="stylesheet" href="/style.css"/>
+
 </head>
 <body>
     <h1>Gestão de Squads e Colaboradores</h1>
@@ -21,12 +23,27 @@
         <button type="submit">Adicionar Colaborador</button>
     </form>
 
-    <h2>Listar Squads</h2>
-    <ul id="listaSquads"></ul>
+    <button id="editSquadBtn">Editar Squad</button>
 
-    <h2>Listar Colaboradores</h2>
-    <ul id="listaColaboradores"></ul>
+    <div id="editSquadPopup" class="popup">
+        <div class="popup-content">
+            <span class="closeBtn">&times;</span>
+            <h2>Escolha o Squad para Editar</h2>
+            <select id="squadSelection">
+            </select>
+            <button id="editSquad">Editar</button>
+            <button id="deleteSquad">Apagar Squad</button>
+            <h3>Adicionar Colaborador ao Squad</h3>
+            <input type="text" id="newColaboradorName" placeholder="Nome do Novo Colaborador">
+            <button id="addColaboradorToSquad">Adicionar Colaborador</button>
+        </div>
+    </div>
 
-    <script src="script.js"></script>
+
+
+    <h2>Equipes e Colaboradores</h2>
+    <div id="squadsContainer"></div>
+
+    <script src="/script.js"></script>
 </body>
 </html>
